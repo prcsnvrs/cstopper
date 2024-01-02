@@ -14,24 +14,44 @@ const Dashboard = () => {
           <div className="subtxt">List of Emergency Police Contacts</div>
           <div className="outer-container">
             <div className="subcon">
-              <div className="user-icon">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  style={{ color: "white", fontSize: "30px" }}
-                />
-                <div className="contactname">Mabolo Police Station</div>
-                <div className="contactnum">09325924464</div>
-              </div>
+              <table className="contacts-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <FontAwesomeIcon
+                        icon={faPhone}
+                        style={{ color: "white", fontSize: "30px" }}
+                      />
+                    </td>
+                    <td>
+                      <div className="contact-details">
+                        <div className="contactname">Parian Police Station</div>
+                        <div className="contactnum">09164216215</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div className="subcon">
-              <div className="user-icon">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  style={{ color: "white", fontSize: "30px" }}
-                />
-                <div className="contactname">Parian Police Station</div>
-                <div className="contactnum">09164216215</div>
-              </div>
+              <table className="contacts-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <FontAwesomeIcon
+                        icon={faPhone}
+                        style={{ color: "white", fontSize: "30px" }}
+                      />
+                    </td>
+                    <td>
+                      <div className="contact-details">
+                        <div className="contactname">Parian Police Station</div>
+                        <div className="contactnum">09164216215</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
