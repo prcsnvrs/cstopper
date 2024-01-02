@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/cstopper/static/css/main.0afd016c.css",
+    "main.js": "/cstopper/static/js/main.39fe090e.js",
+    "static/media/stopper.png": "/cstopper/static/media/stopper.ef903145fa4b30c4a511.png",
+    "static/media/BalooBhaijaan2-Bold.ttf": "/cstopper/static/media/BalooBhaijaan2-Bold.f3d1888dea36a3a9e84b.ttf",
+    "static/media/Commissioner-Bold.ttf": "/cstopper/static/media/Commissioner-Bold.72e134e26ea2a954ef1f.ttf",
+    "static/media/Barlow-Medium.ttf": "/cstopper/static/media/Barlow-Medium.d4afdc134fc10b739bab.ttf",
+    "index.html": "/cstopper/index.html",
+    "main.0afd016c.css.map": "/cstopper/static/css/main.0afd016c.css.map",
+    "main.39fe090e.js.map": "/cstopper/static/js/main.39fe090e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0afd016c.css",
+    "static/js/main.39fe090e.js"
+  ]
+}
