@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'BalooBhaijaan2-Bold';
+    src: url('./fonts/BalooBhaijaan2-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Commissioner-Bold';
+    src: url('./fonts/Commissioner-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow-Medium';
+    src: url('./fonts/Barlow-Medium.ttf') format('truetype');
+}
+
+.dashboard {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* The side navigation menu */
+.dashboard .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: #313131;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.dashboard .sidebar a {
+    display: block;
+    color: red;
+    padding: 16px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Links on mouse-over */
+.dashboard .sidebar a:hover {
+    background-color: #555;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.dashboard div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.dashboard .cs {
+    margin-left: 25px;
+    font-size: 25px;
+}
+
+.dashboard .white-icon {
+    color: white;
+    margin-left: 20px;
+}
+
+.dashboard .red-icon {
+    margin-left: 20px;
+}
+
+/* Add these styles to your CSS file */
+.dashboard .button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust spacing between buttons as needed */
+    margin-left: 20%;
+    padding-top: 20px;
+}
+
+.dashboard .button-grid button {
+    padding: 20px;
+    border-radius: 25px;
+    width: 220px;
+    height: 200px;
+    background-color: #FF2828;
+}
+
+.dashboard .centered-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center; /* Center the text */
+    color: white; /* Set text color to white */
+    background-color: #FF2828; /* Change button background color */
+    font-size: 55px;
+    border-radius: 25px;
+}
+
+.dashboard .top-button {
+    padding-left: 20%;
+    padding-top: 50px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .dashboard .iconCircle {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+    }
+
+    .dashboard .icon {
+        font-size: 20px;
+    }
+
+    .dashboard .texts {
+        font-size: 11px;
+    }
+
+    .dashboard .button {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .dashboard .title {
+        font-size: 30px;
+    }
+
+    .dashboard .imageContainer img {
+        padding-top: 50px;
+        position: absolute;
+        left: 60%;
+    }
+
+    .dashboard .paragraphContainer {
+        font-size: 20px;
+    }
+
+    .dashboard .upperHalf {
+        height: 45vh;
+    }
+
+    .dashboard .lowerHalf {
+        height: 55vh;
+    }
+}
+
+/* Hover styles for clickable text */
+.dashboard .forgot-password-text,
+.dashboard .register-text,
+.dashboard .button:hover {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.dashboard .button:hover {
+    background-color: #b70e0e; /* Change background color on hover if desired */
+}
+
+.dashboard .password-toggle-icon:hover {
+    color: black;
+}

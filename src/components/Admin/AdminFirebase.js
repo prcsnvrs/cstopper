@@ -1,0 +1,16 @@
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBn2DdWEKPZQO8KzQpp0mWBOoHGOOzoNB0",
+  authDomain: "iot-crimestopper.firebaseapp.com",
+  projectId: "iot-crimestopper",
+  storageBucket: "iot-crimestopper.appspot.com",
+  messagingSenderId: "232271908082",
+  appId: "1:232271908082:web:ee068985b45c7d2822946b"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+export { database };

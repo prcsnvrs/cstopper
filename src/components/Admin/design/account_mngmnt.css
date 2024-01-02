@@ -1,0 +1,435 @@
+/* Font Styles */
+.acc {
+  @font-face {
+    font-family: 'BalooBhaijaan2-Bold';
+    src: url('./fonts/BalooBhaijaan2-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Commissioner-Bold';
+    src: url('./fonts/Commissioner-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Barlow-Medium';
+    src: url('./fonts/Barlow-Medium.ttf') format('truetype');
+  }
+}
+
+/* General Styles */
+.acc body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.acc .texts {
+  text-align: center;
+  font-size: 24px;
+  color: #313131;
+}
+
+.acc .body {
+  background-color: white;
+  height: 90vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.acc .table-container {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Table Styles */
+.acc table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.acc th, .acc td {
+  letter-spacing: 1px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.acc th {
+  font-size: 20px;
+  background-color: #f2f2f2;
+}
+
+.acc tbody, .acc td {
+  font-size: 15px;
+  font-family: 'Barlow-Medium';
+}
+
+/* Action Button Styles */
+.acc .action-btn {
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.acc .action-btn.edit {
+  background-color: #4caf50; /* Green color for edit button */
+  color: rgb(255, 255, 255);
+}
+
+.acc .action-btn.delete {
+  background-color: #ff0000; /* Red color for delete button */
+  color: #fff;
+}
+
+.acc .action-btn:hover {
+  background-color: #424242; /* Adjust color as needed */
+}
+
+/* Select Container Styles */
+.acc .select-container {
+  position: relative;
+}
+
+.acc .select-container select {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #5161ce; /* Border color for the dropdown */
+  background-color: #fff; /* Background color for the dropdown */
+  color: #333; /* Text color for the dropdown */
+}
+
+.acc .select-container select:focus {
+  outline: none;
+  border-color: #4caf50; /* Border color on focus */
+}
+
+.acc .select-container::after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+}
+
+/* Select Options Styles */
+.acc .select-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.acc .select-container:hover .select-options {
+  display: block;
+}
+
+.acc .select-options option {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.acc .select-options option:hover {
+  background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Status Button Styles */
+.acc .action-btn.edit.active {
+  background-color: #4caf50; /* Green color for edit button */
+  color: #fff;
+}
+
+.acc .status-btn {
+  border: #333;
+  color: #4caf50; /* Green color for active status */
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 100px;
+  transition: 0.2s ease-in-out;
+  background-color: rgb(233, 233, 233);
+}
+
+.acc .status-btn.active {
+  color: #ff0000; /* Red color for restricted status */
+}
+
+.acc .status-btn:hover {
+  background-color: #848484; /* Adjust color as needed */
+}
+
+/* Center align text in specified columns */
+.acc th:nth-child(5),
+.acc th:nth-child(6),
+.acc td:nth-child(5),
+.acc td:nth-child(6) {
+  text-align: center;
+}
+
+/* Additional Styles for Action Container */
+.acc .action-btn, .acc .status-btn {
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.acc .action-container {
+  position: relative;
+}
+
+.acc .action-btn-container {
+  display: flex;
+}
+
+/* Styles for Edit Options Container */
+.acc .edit-options-container {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 150px; /* Adjust the width as needed */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.acc .edit-options-container select {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #5161ce;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  outline: none;
+}
+
+/* Scrollable Table Styles */
+.acc .scrollable-table {
+  border-radius: 10px;
+  max-height: 300px; /* Set your desired height */
+  overflow-y: auto;
+}
+
+/* Fixed Header Styles */
+.acc .fixed-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+/* Search Bar Styles */
+.acc .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.acc .search-input input[type='text'] {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #030304;
+  font-size: 16px;
+  outline: none;
+}
+
+.acc .add-user-btn {
+  height: 50px;
+  font-family: 'Commissioner-Bold';
+  padding: 10px;
+  margin-left: 350px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.acc .add-user-btn:hover {
+  transition: ease-in-out .2s;
+  background-color: #424242; /* Adjust color as needed */
+}
+
+/* Add User Modal Styles */
+.acc .add-user-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20; /* Higher z-index than fixed header */
+}
+
+.acc .modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 300px; /* Set your desired width */
+  text-align: center;
+}
+
+.acc .modal-content .close {
+  border-radius: 10px;
+  width: 22px;
+  background: rgb(217, 217, 217);
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.acc .modal-content .close:hover {
+  background-color: rgb(163, 163, 163); 
+  transition: ease-in-out .3s;
+}
+
+/* Add User Modal Form Styles */
+.acc .modal-content h2 {
+  font-family: 'Commissioner-Bold';
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.acc label {
+  font-family: 'Commissioner-Bold';
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.acc input {
+  font-family: 'Barlow-Medium';
+  font-weight: 100;
+  width: 280px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.acc button {
+  font-family: 'Commissioner-Bold';
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.acc button:hover {
+  transition: ease-in-out .3s;
+  background-color: rgb(178, 0, 0);
+}
+/* Validator Prompt Styles */
+.acc .validation-error {
+  font-size: 15px;
+  font-family: 'Commissioner-Bold';
+  color: #ff0000; /* Red color for validation error text */
+  margin-bottom: 13px;
+}
+
+/* Highlight Invalid Input Field */
+.acc input.invalid {
+  border-color: #ff0000; /* Red border color for invalid input */
+}
+
+
+
+
+.acc .confirmation-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20; /* Higher z-index than fixed header */
+}
+
+.acc .confirmation-modal .modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 300px; /* Set your desired width */
+  text-align: center;
+}
+
+.acc .confirmation-modal .modal-content .close {
+  border-radius: 10px;
+  width: 22px;
+  background: rgb(217, 217, 217);
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.acc .confirmation-modal .modal-content .close:hover {
+  background-color: rgb(163, 163, 163); 
+  transition: ease-in-out .3s;
+}
+
+.acc .confirmation-modal h2 {
+  font-family: 'Commissioner-Bold';
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.acc .confirmation-modal p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.acc .confirmation-modal button {
+  font-family: 'Commissioner-Bold';
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.acc .confirmation-modal button:hover {
+  transition: ease-in-out .3s;
+  background-color: rgb(178, 0, 0);
+}

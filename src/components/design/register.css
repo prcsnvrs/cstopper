@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'BalooBhaijaan2-Bold';
+  src: url('./fonts/BalooBhaijaan2-Bold.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #313131;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.button {
+  margin-top: 20px;
+  border-radius: 50px;
+  background-color: #FF2828;
+  width: 250px;
+  height: 50px;
+  color: white;
+  font-size: 25px;
+  border-color: #FF2828;
+  font-family: 'BalooBhaijaan2-Bold';
+  transition: background-color 0.3s ease-in-out; /* Adding transition for smooth effect */
+}
+
+.button:hover {
+  background-color: #b81111; /* Change the background color on hover */
+}
+
+span {
+  color: #FF2828;
+}
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.crimestopper-text {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Arial Black';
+}
+
+.form-box {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 300px;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-box h2 {
+  color: #1F4C6B;
+}
+input[type='tel'],
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #F5F4F8;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bolder;
+  padding-left: 30px;
+  background-color: #F5F4F8;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  z-index: 1;
+  color: #252B5C;
+  padding-bottom: 15px;
+}
+
+.input-field {
+  padding-left: 30px;
+}
+
+.input-field::placeholder {
+  color: #999;
+}
+
+.account {
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.login {
+  color: #14C7FF;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 900;
+}
+
+.password-toggle-icon {
+  cursor: pointer;
+  color: grey;
+  margin-left: -30px;
+  padding-top: 10px;
+}
+
+.password-toggle-icon:hover {
+  color: black;
+}
+
+.ver h2 {
+  color: black;
+  font-weight: 900;
+}
+
+h4 {
+  color: #8f8c8c;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 600px) {
+  .form-box {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+
+/* Added styles for clickable text */
+.forgot-password-text,
+.register-text {
+  cursor: pointer;
+  font-weight: bold;
+  color: black; /* Set main color to black */
+  transition: color 0.3s;
+}
+
+.forgot-password-text:hover,
+.register-text:hover {
+  color: rgb(44, 44, 44); /* Change color on hover if desired */
+}
+.paragraphContainer{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Added styles for buttons with ease-in-out transition */
+.link-container {
+  text-align: center;
+}
+

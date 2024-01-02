@@ -1,0 +1,26 @@
+
+.Phone{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.text {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Ensure the height matches the width */
+    text-align: center; /* Center the text horizontally */
+    margin: 5px; /* Add spacing between the input boxes */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    border-radius: 5px; /* Optionally add a border-radius for rounded corners */
+    box-sizing: border-box; /* Ensure the border is included in the width and height */
+  }
+  
+.number {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Ensure the height matches the width */
+    text-align: center; /* Center the text horizontally */
+    margin: 5px; /* Add spacing between the input boxes */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    border-radius: 5px; /* Optionally add a border-radius for rounded corners */
+    box-sizing: border-box; /* Ensure the border is included in the width and height */
+  }
