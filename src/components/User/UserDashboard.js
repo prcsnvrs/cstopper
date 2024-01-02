@@ -3,9 +3,9 @@ import React from "react";
 import './design/dashboard.css';
 import Sidebar from "./Sidebar"
 import EmergencyContacts from "./EmergencyContacts"
+import AddContact from "./AddContact"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faArrowPointer,
     faContactBook,
     faFileAlt,
     faHome,
@@ -22,11 +22,10 @@ function UserDashboard() {
     const navigate = useNavigate();
 
     const buttonsWithIcons = [
-        { text: 'Emergency Contacts', icon: faContactBook },
-        { text: 'Zones', icon: faMapLocationDot },
+        { text: 'Add Contact', icon: faUserTag, link: "/addcontact" },
+        { text: 'Emergency Contacts', icon: faContactBook, link: "/emergencycontacts" },
         { text: 'File Emergency', icon: faFileAlt },
-        { text: 'Add Contact', icon: faUserTag },
-        { text: 'Configure Clicks', icon: faArrowPointer },
+        { text: 'Zones', icon: faMapLocationDot },
         { text: 'Track User', icon: faLocation },
     ];
 
@@ -41,21 +40,29 @@ function UserDashboard() {
     };
 
     return (
-        <div className="dashboard">
-            <Sidebar/>
+        <div className="dashboard" style={{ height: '712px' }}>
+            <Sidebar />
             <div className="top-button">
                 <button className="centered-button">
-                    <FontAwesomeIcon icon={topButton.icon} style={{ color: 'white', paddingTop: '40px' }} />
-                    <span style={{ color: 'white', fontSize: '25px', paddingTop: '10px', height: '40px', width: '1030px'}}>{topButton.text1}</span>
-                    <span style={{ color: 'white', fontSize: '25px'}}>{topButton.text2}</span>
+                    <FontAwesomeIcon icon={topButton.icon} style={{ color: 'white' }} />
+                    <span style={{ color: 'white', fontSize: '25px', height: '40px', width: '1030px' }}>{topButton.text1}</span>
+                    <span style={{ color: 'white', fontSize: '25px' }}>{topButton.text2}</span>
                 </button>
             </div>
             <div className="button-grid">
                 {buttonsWithIcons.map((button, index) => (
-                    <button key={index} className="centered-button">
+                    <Link
+                        key={index}
+                        to={button.link}
+                        className="centered-button"
+                        style={{
+                            width: '180px',
+                            height: '130px',
+                        }}
+                    >
                         <FontAwesomeIcon icon={button.icon} style={{ color: 'white' }} />
                         <span style={{ color: 'white', fontSize: '25px', paddingTop: '10px' }}>{button.text}</span>
-                    </button>
+                    </Link>
                 ))}
             </div>
         </div>
@@ -63,3 +70,4 @@ function UserDashboard() {
 }
 
 export default UserDashboard;
+
