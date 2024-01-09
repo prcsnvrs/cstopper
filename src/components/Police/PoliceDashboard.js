@@ -1,15 +1,27 @@
 // PoliceDashboard.js
-import React from 'react';
+import React from 'react'; // Import React
+import { render } from 'react-dom'; // Import render
+import { useState } from 'react';
+import Calendar from 'react-calendar';
 import './Design/police.css';
 import PoliceSidebar from './PoliceSidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBell,
     faCircleUser,
-    faPencil
+    faPencil,
+    faCar,
+    faPeopleRobbery,
+    faPersonFallingBurst
 } from '@fortawesome/free-solid-svg-icons';
 
 const PoliceDashboard = () => {
+  const [date, setDate] = useState(new Date());
+
+  const onChange = date =>{
+    setDate(date);
+  };
+
   return (
     <div>
       <PoliceSidebar />
@@ -41,15 +53,31 @@ const PoliceDashboard = () => {
 
       {/* Content */}
       <div className="police-dashboard-content">
-        <div className="grid-item grid-item-1">Item 1</div>
-        <div className="grid-item grid-item-2">Item 2</div>
-        <div className="grid-item grid-item-3">Item 3</div>
+        <div className="grid-item grid-item-1">
+          <FontAwesomeIcon icon={faCar} size='3x' />
+          <div className='crime-num'>105</div>
+          <div className='crime-desc'>Infraction Reports</div>
+        </div>
+        <div className="grid-item grid-item-2">
+          <FontAwesomeIcon icon={faPeopleRobbery} size='3x' />
+          <div className='crime-num'>97</div>
+          <div className='crime-desc'>Misdemeanor Reports</div>
+        </div>
+        <div className="grid-item grid-item-3">
+          <FontAwesomeIcon icon={faPersonFallingBurst} size='3x' />
+          <div className='crime-num'>50</div>
+          <div className='crime-desc'>Felony Reports</div>
+        </div>
         <div className="grid-item grid-item-4">Item 4</div>
         <div className="grid-item grid-item-5">Item 5</div>
-        <div className="grid-item grid-item-6">Item 6</div>
+        <div className="grid-item grid-item-6">
+          <Calendar onChange={onChange} value={date} />
+        </div>
       </div>
     </div>
   );
 };
+
+render(<PoliceDashboard />, document.querySelector('#root')); // Render PoliceDashboard
 
 export default PoliceDashboard;
