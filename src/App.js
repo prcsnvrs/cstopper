@@ -8,14 +8,18 @@ import Success from './components/Success';
 import ForgotPassword from './components/ForgotPassword';
 // USER
 import UserDashboard from './components/User/UserDashboard';
-import EmergencyContacts from './components/User/EmergencyContacts'
+import EmergencyContacts from './components/User/EmergencyContacts';
+import AddContact from './components/User/AddContact';
+import EditProfile from './components/User/EditProfile';
+import ReportEmergency from './components/User/ReportEmergency';
+import Settings from './components/User/Settings';
 // ADMIN
-import AdminDashboard from './components/Admin/AdminDashboard'
-import AdminAccount from './components/Admin/Account_mngmnt'
-import AdminRecord from './components/Admin/Record_mngmnt'
-import AdminZone from './components/Admin/Zone_mngmnt'
-import AdminSettings from './components/Admin/Settings'
-import AdminProfile from './components/Admin/Profile'
+import AdminDashboard from './components/Admin/AdminDashboard';
+import AdminAccount from './components/Admin/Account_mngmnt';
+import AdminRecord from './components/Admin/Record_mngmnt';
+import AdminZone from './components/Admin/Zone_mngmnt';
+import AdminSettings from './components/Admin/Settings';
+import AdminProfile from './components/Admin/Profile';
 import { Container, Row, Col } from 'react-bootstrap';
 
 function App() {
@@ -34,6 +38,10 @@ function App() {
             {/* USER */}
             <Route path="/userdashboard" element={<UserDashboard />} />
             <Route path="/emergencycontacts" element={<EmergencyContacts />} />
+            <Route path="/addcontact" element={<AddContact />} />
+            <Route path="/editprofile" element={<EditProfile />} />
+            <Route path="/reportemergency" element={<ReportEmergency />} />
+            <Route path="/settings" element={<Settings />} />
             {/* ADMIN */}
             <Route path="/admindashboard" element={<AdminDashboard />} />
             <Route path="/adminzone" element={<AdminZone />} />
