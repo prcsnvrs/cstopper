@@ -9,6 +9,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const PoliceDataAnalysis = () => {
+  const crimesReportedData = [
+    { barangay: 'Brgy. Caretta', crimes: 10 },
+    { barangay: 'Brgy. Mabolo', crimes: 15 },
+    { barangay: 'Brgy. Lusaran', crimes: 5 },
+    { barangay: 'Brgy. Mabini', crimes: 8 },
+    { barangay: 'Brgy. Mambaling', crimes: 12 },
+    { barangay: 'Brgy. Pari-an', crimes: 7 },
+    { barangay: 'Brgy. San Jose', crimes: 20 },
+    // Add more data as needed
+  ];
+
   return (
     <div>
       <PoliceSidebar />
@@ -49,8 +60,15 @@ const PoliceDataAnalysis = () => {
         </div>
         <div className="police-grid-item police-grid-item-3">
           {/* Content for Grid Item 3 */}
-          <h2>Grid Item 3</h2>
-          <p>Row 2 - 3, Col 3</p>
+          <h3>Crimes Reported by Barangay</h3>
+          <ul className="crimes-list">
+            {crimesReportedData.map((item, index) => (
+              <li key={index}>
+                <span>{item.barangay}</span>
+                <span>{item.crimes} crimes reported</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
