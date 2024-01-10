@@ -318,6 +318,7 @@ h2 {
   gap: 20px; /* Adjust the gap between grid items */
   height: 650px;
   width: 900px;
+  margin-left: 200px;
 }
 
 .grid-item {
