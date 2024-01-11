@@ -61,10 +61,11 @@ const PoliceReport = () => {
       <div>
         {/* Search Bar */}
         <input
-          type="text"
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={handleSearchChange}
+        type="text"
+        placeholder="Search..."
+        value={searchQuery}
+        onChange={handleSearchChange}
+        style={{ padding: '10px', borderRadius: '10px', border: '1px solid #ccc', fontSize: '16px', width: '350px', }}
         />
         
         {/* Table */}
