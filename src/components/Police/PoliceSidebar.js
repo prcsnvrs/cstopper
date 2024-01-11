@@ -52,9 +52,8 @@ export default PoliceSidebar;
 
 
 // PoliceSidebar.js
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import './Design/police.css';  // Assuming you have your styles in a 'police.css' file
+// import React, { useState, useEffect } from 'react';
+// import './Design/police.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {
 //     faHome,
@@ -62,37 +61,39 @@ export default PoliceSidebar;
 //     faChartLine,
 //     faSignOutAlt
 // } from '@fortawesome/free-solid-svg-icons';
+// import { Link, useLocation } from 'react-router-dom';
 
 // const PoliceSidebar = () => {
-//     const [activeItem, setActiveItem] = useState('home'); // Default active item is 'home'
+//     const location = useLocation();
+//     const [activeLink, setActiveLink] = useState(location.pathname);
 
-//     const handleItemClick = (itemName) => {
-//         setActiveItem(itemName);
-//     };
+//     useEffect(() => {
+//         setActiveLink(location.pathname);
+//     }, [location.pathname]);
 
 //     return (
 //         <div className="police-sidebar">
 //             <nav className="navbar">
-//                 {/* Your navigation logic here */}
+                
 //             </nav>
 
 //             {/* Sidebar Content */}
 //             <div className="sidebar-content">
 //                 {/* Icons and Labels with navigation links */}
-//                 <div className={`sidebar-item ${activeItem === 'home' ? 'active' : ''}`}>
-//                     <Link to="/policedashboard" onClick={() => handleItemClick('home')}>
+//                 <div className={`sidebar-item ${activeLink === '/policedashboard' ? 'active' : ''}`}>
+//                     <Link to="/policedashboard">
 //                         <FontAwesomeIcon icon={faHome} size="2x" />
 //                         <span>Home</span>
 //                     </Link>
 //                 </div>
-//                 <div className={`sidebar-item ${activeItem === 'reports' ? 'active' : ''}`}>
-//                     <Link to="/policereports" onClick={() => handleItemClick('reports')}>
+//                 <div className={`sidebar-item ${activeLink === '/policereport' ? 'active' : ''}`}>
+//                     <Link to="/policereports">
 //                         <FontAwesomeIcon icon={faFolderClosed} size="2x" />
 //                         <span>Reports</span>
 //                     </Link>
 //                 </div>
-//                 <div className={`sidebar-item ${activeItem === 'analytics' ? 'active' : ''}`}>
-//                     <Link to="/policedataanalytics" onClick={() => handleItemClick('analytics')}>
+//                 <div className={`sidebar-item ${activeLink === 'policedataanalytics' ? 'active' : ''}`}>
+//                     <Link to="/policedataanalytics">
 //                         <FontAwesomeIcon icon={faChartLine} size="2x" />
 //                         <span>Data Analytics</span>
 //                     </Link>
